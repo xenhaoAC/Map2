@@ -38,7 +38,7 @@ public class MapsActivity extends FragmentActivity {
     protected void onResume() {
         super.onResume();
         setUpMapIfNeeded();
-    }       //
+    }       //  testestest
 
     /**
      * Sets up the map if it is possible to do so (i.e., the Google Play services APK is correctly
