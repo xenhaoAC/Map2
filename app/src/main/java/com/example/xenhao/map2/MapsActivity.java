@@ -1,9 +1,13 @@
 package com.example.xenhao.map2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
 
 import com.getbase.floatingactionbutton.FloatingActionButton;
+import com.getbase.floatingactionbutton.FloatingActionsMenu;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -17,21 +21,46 @@ public class MapsActivity extends FragmentActivity {
     //  coordinate of Kuala Lumpur
     static final LatLng KUALA_LUMPUR = new LatLng(3.1333, 101.6833);
 
+    //  FAB
+    Toolbar toolbar;
+    FloatingActionsMenu FAB;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
+
+//        toolbar = (Toolbar)findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
+
         setUpMapIfNeeded();
         setUpFAB();
     }
 
     private void setUpFAB() {
-        FloatingActionButton button = (FloatingActionButton) findViewById(R.id.setter);
-        button.setSize(FloatingActionButton.SIZE_NORMAL);
-        button.setColorNormalResId(R.color.pink);
-        button.setColorPressedResId(R.color.pink_pressed);
-        button.setIcon(R.drawable.abc_ic_voice_search_api_mtrl_alpha);
-        button.setStrokeVisible(false);
+//        FloatingActionsMenu button = (FloatingActionsMenu) findViewById(R.id.setter);
+//        button.setSize(FloatingActionButton.SIZE_NORMAL);
+//        button.setColorNormalResId(R.color.pink);
+//        button.setColorPressedResId(R.color.pink_pressed);
+//        button.setIcon(R.drawable.abc_ic_voice_search_api_mtrl_alpha);
+//        button.setStrokeVisible(false);
+        final FloatingActionButton checkIn = (FloatingActionButton)findViewById(R.id.check_in);
+        checkIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent checkinScreen = new Intent(MapsActivity.this, SecondActivity.class);
+                startActivity(checkinScreen);
+            }
+        });
+
+        final FloatingActionButton option2 = (FloatingActionButton)findViewById(R.id.option2);
+        option2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent option2screen = new Intent(MapsActivity.this, ThirdActivity.class);
+                startActivity(option2screen);
+            }
+        });
     }
 
     @Override
