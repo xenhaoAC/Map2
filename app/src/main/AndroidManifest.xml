@@ -36,11 +36,13 @@
         </activity>
         <activity
             android:name=".SecondActivity"
-            android:label="@string/title_activity_second" >
+            android:label="@string/title_activity_second"
+            android:theme="@style/AppTheme.Dialog">
         </activity>
         <activity
             android:name=".ThirdActivity"
-            android:label="@string/title_activity_third" >
+            android:label="@string/title_activity_third"
+            android:theme="@style/AppTheme.Dialog">
         </activity>
     </application>
 
