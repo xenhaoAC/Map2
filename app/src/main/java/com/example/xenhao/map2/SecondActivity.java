@@ -1,14 +1,14 @@
 package com.example.xenhao.map2;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.WindowManager;
 
 
-public class SecondActivity extends ActionBarActivity {
+public class SecondActivity extends AppCompatActivity {
 
     Toolbar toolbar;
 
