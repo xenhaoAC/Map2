@@ -60,6 +60,13 @@ public class MapsActivity extends FragmentActivity {
         mNavItems.add(new NavItem("Home", "Meetup Destination", R.drawable.ic_action_accept));
         mNavItems.add(new NavItem("Preferences", "Change Preferences", R.drawable.ic_action_share));
         mNavItems.add(new NavItem("About", "Get To Know Us", R.drawable.ic_action_about));
+        //  Additional duplicate icons for scrolling testing
+        mNavItems.add(new NavItem("Home", "Meetup Destination", R.drawable.ic_action_accept));
+        mNavItems.add(new NavItem("Preferences", "Change Preferences", R.drawable.ic_action_share));
+        mNavItems.add(new NavItem("About", "Get To Know Us", R.drawable.ic_action_about));
+        mNavItems.add(new NavItem("Home", "Meetup Destination", R.drawable.ic_action_accept));
+        mNavItems.add(new NavItem("Preferences", "Change Preferences", R.drawable.ic_action_share));
+        mNavItems.add(new NavItem("About", "Get To Know Us", R.drawable.ic_action_about));
 
         //  DrawerLayout
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
